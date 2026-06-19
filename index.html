@@ -19,7 +19,7 @@
             darkbg: '#050a10',
             panelbg: '#111827',
             cyan: {
-              400: '#00f0ff', // Matching the neon cyan from your PPT
+              400: '#00f0ff',
               500: '#00c3ff',
             }
           }
@@ -28,8 +28,7 @@
     }
   </script>
 
-<style>
-    /* PPT-style Grid Background */
+  <style>
     body {
         background-color: #050a10;
         background-image: 
@@ -39,12 +38,10 @@
         color: #e2e8f0;
     }
     
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar { width: 8px; height: 6px; }
     ::-webkit-scrollbar-track { background: #050a10; }
     ::-webkit-scrollbar-thumb { background: #00f0ff; border-radius: 4px; }
     
-    /* Glassmorphism Panel from your design */
     .glass-panel {
       background: rgba(17, 24, 39, 0.7);
       backdrop-filter: blur(12px);
@@ -67,10 +64,6 @@
       border-radius: 4px;
       letter-spacing: 0.05em;
     }
-
-    iframe:hover {
-      overflow: auto; /* Allow scrolling within the iframe when hovered */
-    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-4 md:p-8">
@@ -80,7 +73,7 @@
             GRUPO 8 <span class="text-cyan-400">_</span>
         </div>
         <nav class="text-xs font-mono text-cyan-400/70 hidden md:block">
-            
+            [ PORTAFOLIO_DIGITAL_V1.0 ]
         </nav>
     </header>
     
@@ -93,9 +86,8 @@
         </p>
     </div>
 
-    <!-- Navigation Menu -->
-    <div class="w-full max-w-6xl mb-12 sticky top-0 z-50 bg-darkbg/90 backdrop-blur-sm py-4 mt-4">
-        <nav class="flex flex-wrap justify-center gap-6 text-sm font-sans font-medium">
+    <div class="w-full max-w-6xl mb-12 sticky top-0 z-[9999] bg-darkbg/90 backdrop-blur-sm py-4 mt-4 overflow-x-auto">
+        <nav class="flex justify-start md:justify-center gap-6 text-sm font-sans font-medium whitespace-nowrap px-4">
             <a href="#" class="text-white hover:text-cyan-400 transition-colors duration-300 hidden" id="home-button">Home</a>
             <a href="#equipo" class="text-white hover:text-cyan-400 transition-colors duration-300">Equipo</a>
             <a href="#presentacion" class="text-white hover:text-cyan-400 transition-colors duration-300">Presentación</a>
@@ -106,8 +98,9 @@
             <a href="#galeria" class="text-white hover:text-cyan-400 transition-colors duration-300">Galería</a>
         </nav>
     </div>
+
     <main class="w-full max-w-6xl space-y-12">
-      <section class="glass-panel p-6 pt-8">
+      <section id="equipo" class="glass-panel p-6 pt-8">
         <div class="info-label">GRUPO_8_INTEGRANTES.TXT</div>
         <h2 class="text-2xl font-bold text-white mb-4">Nuestro Equipo</h2>
         <ul class="text-lg text-gray-300 space-y-2">
@@ -120,12 +113,12 @@
         <p class="text-sm text-gray-400 mt-4">
           Unidos por la pasión por la tecnología y el aprendizaje continuo.
         </p>
-        </section>
+      </section>
 
     <section id="presentacion" class="glass-panel p-2 shadow-2xl shadow-cyan-900/20">
       <div class="info-label">PRESENTACIÓN.PPTX</div>
       <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
-        <iframe class="hover:overflow-auto"
+        <iframe 
           src="https://mngenvmcap617550-my.sharepoint.com/:p:/g/personal/gamaliel_velasquez_it_365support_dev/IQBR2X9IsSbVRJIiPoGO_wYPAY2aL5PKowVyBXUzpxb3esE?e=xOqdzx&action=embedview" 
           width="100%" 
           height="100%" 
@@ -167,7 +160,7 @@
       <section id="video" class="glass-panel p-2">
         <div class="info-label">04_VIDEO_PROYECTO.MP4</div>
         <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
-          <iframe class="hover:overflow-auto"
+          <iframe 
             src="TU_ENLACE_AQUI_VIDEO" 
             width="100%" 
             height="100%" 
@@ -183,7 +176,7 @@
     <section id="informe" class="glass-panel p-2">
       <div class="info-label">INFORME.PDF</div>
       <div class="w-full h-[800px] rounded overflow-hidden bg-black mt-4">
-        <iframe class="hover:overflow-auto"
+        <iframe 
           src="https://drive.google.com/file/d/1VKw1O0_FuAaka5wu5K8p9pAZyrz4QwzO/preview" 
           width="100%" 
           height="100%" 
@@ -195,7 +188,7 @@
 
     <section id="infografia" class="glass-panel p-6 flex flex-col items-center">
       <div class="info-label">INFOGRAFÍA.PNG</div>
-        <iframe class="w-full h-[800px] rounded overflow-hidden bg-black mt-4 hover:overflow-auto"
+        <iframe class="w-full h-[800px] rounded overflow-hidden bg-black mt-4"
           src="https://drive.google.com/file/d/1I68PJeitjb9aQuh9GjTUsludTvSe4ZMF/preview" 
           width="100%" 
           height="100%" 
@@ -204,35 +197,32 @@
         </iframe>
     </section>
 
-    <!-- Carousel Section -->
     <section id="galeria" class="glass-panel p-6 pt-8">
       <div class="info-label">PUBLICIDAD.JPG</div>
       <h2 class="text-2xl font-bold text-white mb-4">Galería de Imágenes</h2>
       <div class="relative w-full overflow-hidden rounded-lg">
         <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
-          <!-- Image 1 -->
           <div class="w-full flex-shrink-0">
-            <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4 hover:overflow-auto"
-          src="https://drive.google.com/file/d/1FQ4BnFORNz8fk04lut1wstwU5vGyXP2X/preview" 
-          width="100%" 
-          height="100%" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
-          </div>
-          <!-- Image 2 -->
-          <div class="w-full flex-shrink-0 ">
             <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4"
-          src="https://drive.google.com/file/d/1EBV6OOLdoCjNzo3CTkx76tO3TprL6fZ5/preview" 
-          width="100%" 
-          height="100%" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
+              src="https://drive.google.com/file/d/1FQ4BnFORNz8fk04lut1wstwU5vGyXP2X/preview" 
+              width="100%" 
+              height="100%" 
+              frameborder="0" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="w-full flex-shrink-0">
+            <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4"
+              src="https://drive.google.com/file/d/1EBV6OOLdoCjNzo3CTkx76tO3TprL6fZ5/preview" 
+              width="100%" 
+              height="100%" 
+              frameborder="0" 
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
-        <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full" onclick="prevSlide()">&#10094;</button>
-        <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full" onclick="nextSlide()">&#10095;</button>
+        <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full z-10" onclick="prevSlide()">&#10094;</button>
+        <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full z-10" onclick="nextSlide()">&#10095;</button>
       </div>
     </section>
 
@@ -252,10 +242,9 @@
     function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }
     function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide); }
 
-    // Show/hide home button on scroll
     window.addEventListener('scroll', () => {
       const homeButton = document.getElementById('home-button');
-      if (window.scrollY > 200) { // Adjust scroll threshold as needed
+      if (window.scrollY > 200) {
         homeButton.classList.remove('hidden');
       } else {
         homeButton.classList.add('hidden');
