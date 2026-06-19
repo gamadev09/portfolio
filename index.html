@@ -85,7 +85,7 @@
             COMPETENCIAS DIGITALES
         </h1>
         <p class="text-lg text-gray-400 max-w-2xl">
-            Guía metodológica para el desarrollo de perfiles competitivos y tecnológicos en la era del conocimiento[cite: 3].
+            Guía metodológica para el desarrollo de perfiles competitivos y tecnológicos en la era del conocimiento.
         </p>
     </div>
     <main class="w-full max-w-6xl space-y-12">
@@ -108,7 +108,7 @@
       <div class="info-label">PRESENTACIÓN.PPTX</div>
       <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
         <iframe 
-          src="https://mngenvmcap617550-my.sharepoint.com/:p:/g/personal/gamaliel_velasquez_it_365support_dev/IQBR2X9IsSbVRJIiPoGO_wYPARU1AeMzeWg82J3iJ4gpwpk?e=fhTfND&action=embedview" 
+          src="https://mngenvmcap617550-my.sharepoint.com/:p:/g/personal/gamaliel_velasquez_it_365support_dev/IQBR2X9IsSbVRJIiPoGO_wYPAY2aL5PKowVyBXUzpxb3esE?e=xOqdzx&action=embedview" 
           width="100%" 
           height="100%" 
           frameborder="0" 
@@ -138,7 +138,7 @@
           <li><span class="text-cyan-400">></span> Nextcloud</li>
           <li><span class="text-cyan-400">></span> Affinity</li>
           <li><span class="text-cyan-400">></span> VS Code</li>
-          <li><span class="text-cyan-400">></span> GitHub [cite: 44]</li>
+          <li><span class="text-cyan-400">></span> GitHub</li>
         </ul>
       </div>
 
@@ -163,21 +163,59 @@
     
 
     <section class="glass-panel p-2">
-      <div class="info-label">05_PUBLICACION_DIGITAL.PDF</div>
-      <img
-        src="TU_ENLACE_AQUI_IMAGEN_PUBLICACION"
-        alt="Publicación Digital"
-        class="w-full max-w-2xl mt-4 rounded border border-cyan-500/20 shadow-[0_0_30px_rgba(0,240,255,0.1)]"
-      >
+      <div class="info-label">INFORME.PDF</div>
+      <div class="w-full h-[800px] rounded overflow-hidden bg-black mt-4">
+        <iframe
+          src="https://drive.google.com/file/d/1sfMQrC0ydwq2vdqnOeNBIAG4L6kb8gh8/preview" 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
 
     <section class="glass-panel p-6 flex flex-col items-center">
-      <div class="info-label">03_INFOGRAFIA_COMPLETA.PNG</div>
-      <img 
-        src="TU_ENLACE_AQUI_IMAGEN_INFOGRAFIA" 
-        alt="Infografía Competencias Digitales" 
-        class="w-full max-w-2xl mt-4 rounded border border-cyan-500/20 shadow-[0_0_30px_rgba(0,240,255,0.1)]"
-      >
+      <div class="info-label">INFOGRAFÍA.PNG</div>
+        <iframe class="w-full h-[800px] rounded overflow-hidden bg-black mt-4"
+          src="https://drive.google.com/file/d/1I68PJeitjb9aQuh9GjTUsludTvSe4ZMF/preview" 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="glass-panel p-6 pt-8">
+      <div class="info-label">PUBLICIDAD.JPG</div>
+      <h2 class="text-2xl font-bold text-white mb-4">Galería de Imágenes</h2>
+      <div class="relative w-full overflow-hidden rounded-lg">
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+          <!-- Image 1 -->
+          <div class="w-full flex-shrink-0">
+            <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4"
+          src="https://drive.google.com/file/d/1FQ4BnFORNz8fk04lut1wstwU5vGyXP2X/preview" 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+          </div>
+          <!-- Image 2 -->
+          <div class="w-full flex-shrink-0">
+            <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4"
+          src="https://drive.google.com/file/d/1EBV6OOLdoCjNzo3CTkx76tO3TprL6fZ5/preview" 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+          </div>
+        </div>
+        <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full" onclick="prevSlide()">&#10094;</button>
+        <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full" onclick="nextSlide()">&#10095;</button>
+      </div>
     </section>
 
   </main>
@@ -186,6 +224,16 @@
     <p>EL APRENDIZAJE CONTINUO ES LA HERRAMIENTA CLAVE PARA DOMINAR EL FUTURO DIGITAL</p>
     <p class="mt-2">© 2026 GRUPO 8</p>
   </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('carousel-track').children;
+    function showSlide(index) {
+      document.getElementById('carousel-track').style.transform = `translateX(-${index * 100}%)`;
+    }
+    function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }
+    function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide); }
+  </script>
 
 </body>
 </html>
