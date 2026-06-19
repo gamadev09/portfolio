@@ -96,6 +96,7 @@
     <!-- Navigation Menu -->
     <div class="w-full max-w-6xl mb-12 sticky top-0 z-50 bg-darkbg/90 backdrop-blur-sm py-4 mt-4">
         <nav class="flex flex-wrap justify-center gap-6 text-sm font-sans font-medium">
+            <a href="#" class="text-white hover:text-cyan-400 transition-colors duration-300 hidden" id="home-button">Home</a>
             <a href="#equipo" class="text-white hover:text-cyan-400 transition-colors duration-300">Equipo</a>
             <a href="#presentacion" class="text-white hover:text-cyan-400 transition-colors duration-300">Presentación</a>
             <a href="#definicion" class="text-white hover:text-cyan-400 transition-colors duration-300">Definición</a>
@@ -250,6 +251,16 @@
     }
     function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }
     function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide); }
+
+    // Show/hide home button on scroll
+    window.addEventListener('scroll', () => {
+      const homeButton = document.getElementById('home-button');
+      if (window.scrollY > 200) { // Adjust scroll threshold as needed
+        homeButton.classList.remove('hidden');
+      } else {
+        homeButton.classList.add('hidden');
+      }
+    });
   </script>
 
 </body>
