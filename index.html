@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth scroll-pt-32">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,11 +82,24 @@
     
     <div class="w-full max-w-6xl mb-12 text-center md:text-left">
         <h1 class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4 tracking-tight">
-            COMPETENCIAS DIGITALES
+            <span class="text-white">COMPETENCIAS DIGITALES</span>
         </h1>
         <p class="text-lg text-gray-400 max-w-2xl">
             Guía metodológica para el desarrollo de perfiles competitivos y tecnológicos en la era del conocimiento.
         </p>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="w-full max-w-6xl mb-12 sticky top-0 z-50 bg-darkbg/90 backdrop-blur-sm py-4 mt-4">
+        <nav class="flex flex-wrap justify-center gap-6 text-sm font-sans font-medium">
+            <a href="#equipo" class="text-white hover:text-cyan-400 transition-colors duration-300">Equipo</a>
+            <a href="#presentacion" class="text-white hover:text-cyan-400 transition-colors duration-300">Presentación</a>
+            <a href="#definicion" class="text-white hover:text-cyan-400 transition-colors duration-300">Definición</a>
+            <a href="#video" class="text-white hover:text-cyan-400 transition-colors duration-300">Video</a>
+            <a href="#informe" class="text-white hover:text-cyan-400 transition-colors duration-300">Informe</a>
+            <a href="#infografia" class="text-white hover:text-cyan-400 transition-colors duration-300">Infografía</a>
+            <a href="#galeria" class="text-white hover:text-cyan-400 transition-colors duration-300">Galería</a>
+        </nav>
     </div>
     <main class="w-full max-w-6xl space-y-12">
       <section class="glass-panel p-6 pt-8">
@@ -104,7 +117,7 @@
         </p>
         </section>
 
-    <section class="glass-panel p-2 shadow-2xl shadow-cyan-900/20">
+    <section id="presentacion" class="glass-panel p-2 shadow-2xl shadow-cyan-900/20">
       <div class="info-label">PRESENTACIÓN.PPTX</div>
       <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
         <iframe 
@@ -119,7 +132,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
-      <div class="glass-panel p-6 pt-8">
+      <div id="definicion" class="glass-panel p-6 pt-8">
         <div class="info-label">DEFINICIÓN</div>
         <p class="text-sm text-gray-300 leading-relaxed">
           Es la integración crítica y estratégica de conocimientos, habilidades, actitudes y herramientas para responder de manera óptima a las necesidades y retos que plantea el entorno laboral actual.
@@ -146,7 +159,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       
-      <section class="glass-panel p-2">
+      <section id="video" class="glass-panel p-2">
         <div class="info-label">04_VIDEO_PROYECTO.MP4</div>
         <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
           <iframe 
@@ -162,7 +175,7 @@
     </div>
     
 
-    <section class="glass-panel p-2">
+    <section id="informe" class="glass-panel p-2">
       <div class="info-label">INFORME.PDF</div>
       <div class="w-full h-[800px] rounded overflow-hidden bg-black mt-4">
         <iframe
@@ -175,7 +188,7 @@
       </div>
     </section>
 
-    <section class="glass-panel p-6 flex flex-col items-center">
+    <section id="infografia" class="glass-panel p-6 flex flex-col items-center">
       <div class="info-label">INFOGRAFÍA.PNG</div>
         <iframe class="w-full h-[800px] rounded overflow-hidden bg-black mt-4"
           src="https://drive.google.com/file/d/1I68PJeitjb9aQuh9GjTUsludTvSe4ZMF/preview" 
@@ -187,7 +200,7 @@
     </section>
 
     <!-- Carousel Section -->
-    <section class="glass-panel p-6 pt-8">
+    <section id="galeria" class="glass-panel p-6 pt-8">
       <div class="info-label">PUBLICIDAD.JPG</div>
       <h2 class="text-2xl font-bold text-white mb-4">Galería de Imágenes</h2>
       <div class="relative w-full overflow-hidden rounded-lg">
