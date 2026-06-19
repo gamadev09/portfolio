@@ -67,6 +67,10 @@
       border-radius: 4px;
       letter-spacing: 0.05em;
     }
+
+    iframe:hover {
+      overflow: auto; /* Allow scrolling within the iframe when hovered */
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-4 md:p-8">
@@ -120,7 +124,7 @@
     <section id="presentacion" class="glass-panel p-2 shadow-2xl shadow-cyan-900/20">
       <div class="info-label">PRESENTACIÓN.PPTX</div>
       <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
-        <iframe 
+        <iframe class="hover:overflow-auto"
           src="https://mngenvmcap617550-my.sharepoint.com/:p:/g/personal/gamaliel_velasquez_it_365support_dev/IQBR2X9IsSbVRJIiPoGO_wYPAY2aL5PKowVyBXUzpxb3esE?e=xOqdzx&action=embedview" 
           width="100%" 
           height="100%" 
@@ -162,7 +166,7 @@
       <section id="video" class="glass-panel p-2">
         <div class="info-label">04_VIDEO_PROYECTO.MP4</div>
         <div class="w-full aspect-video rounded overflow-hidden bg-black mt-4">
-          <iframe 
+          <iframe class="hover:overflow-auto"
             src="TU_ENLACE_AQUI_VIDEO" 
             width="100%" 
             height="100%" 
@@ -178,7 +182,7 @@
     <section id="informe" class="glass-panel p-2">
       <div class="info-label">INFORME.PDF</div>
       <div class="w-full h-[800px] rounded overflow-hidden bg-black mt-4">
-        <iframe
+        <iframe class="hover:overflow-auto"
           src="https://drive.google.com/file/d/1VKw1O0_FuAaka5wu5K8p9pAZyrz4QwzO/preview" 
           width="100%" 
           height="100%" 
@@ -190,7 +194,7 @@
 
     <section id="infografia" class="glass-panel p-6 flex flex-col items-center">
       <div class="info-label">INFOGRAFÍA.PNG</div>
-        <iframe class="w-full h-[800px] rounded overflow-hidden bg-black mt-4"
+        <iframe class="w-full h-[800px] rounded overflow-hidden bg-black mt-4 hover:overflow-auto"
           src="https://drive.google.com/file/d/1I68PJeitjb9aQuh9GjTUsludTvSe4ZMF/preview" 
           width="100%" 
           height="100%" 
@@ -207,7 +211,7 @@
         <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
           <!-- Image 1 -->
           <div class="w-full flex-shrink-0">
-            <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4"
+            <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4 hover:overflow-auto"
           src="https://drive.google.com/file/d/1FQ4BnFORNz8fk04lut1wstwU5vGyXP2X/preview" 
           width="100%" 
           height="100%" 
@@ -216,7 +220,7 @@
         </iframe>
           </div>
           <!-- Image 2 -->
-          <div class="w-full flex-shrink-0">
+          <div class="w-full flex-shrink-0 ">
             <iframe class="w-full h-[500px] rounded overflow-hidden bg-black mt-4"
           src="https://drive.google.com/file/d/1EBV6OOLdoCjNzo3CTkx76tO3TprL6fZ5/preview" 
           width="100%" 
